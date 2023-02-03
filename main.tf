@@ -42,7 +42,7 @@ resource "azurerm_network_security_group" "example" {
 resource "azurerm_network_security_rule" "example" {
   name                        = "test123"
   priority                    = 100
-  direction                   = "Outbound"
+  direction                   = "Inbound"
   access                      = "Allow"
   protocol                    = "Tcp"
   source_port_range           = "*"
