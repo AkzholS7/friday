@@ -81,11 +81,9 @@ resource "azurerm_linux_virtual_machine" "example" {
     azurerm_network_interface.example.id,
   ]
   custom_data = filebase64("web.sh")
+  admin_password = "Akzhol@1"
+  disable_password_authentication = false
 
-  admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
-  }
 
   os_disk {
     caching              = "ReadWrite"
